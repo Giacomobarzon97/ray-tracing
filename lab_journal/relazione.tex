@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{url}
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{footnote}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage[colorinlistoftodos]{todonotes}
+%\usepackage[hidelinks]{hyperref}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\hypersetup{colorlinks, linkcolor=black, urlcolor=blue}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{cleveref}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=single,
+	backgroundcolor = \color{lightgray},
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+%Layout di pagina
+\geometry{
+	a4paper,
+	total={160mm,225mm},
+	left=25mm,
+	top=25mm
+}
+
+%intestazione e piè di pagina
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength\headheight{57pt}
+\lhead{Rendering-Report}
+\lfoot{Rendering-Report}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+
+\newcommand\imagescale{0.5}
+%\newcommand{\code}[1]{\texttt{#1}}
+\interfootnotelinepenalty=10000
+\DeclareTextFontCommand{\code}{\ttfamily\hyphenchar\font=45\relax}
+
+\begin{document}
+	\include{header}
+	\include{sections/introduction}
+	\tableofcontents
+	\include{sections/worksheet1}
+	\include{sections/worksheet2}
+	\include{sections/worksheet3}
+	\include{sections/worksheet4}
+	\include{sections/worksheet5}
+	\include{sections/worksheet6}
+	\include{sections/worksheet7}
+	\include{sections/worksheet8}
+	\include{sections/worksheet9}
+	\include{sections/project}
+\end{document}
